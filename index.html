@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copanina dos Orlandinhos · ORLA</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">
+    <img src="assets/orla-logo-transparent.png" alt="ORLA" style="height:28px;width:auto;">
+    <div class="nav-sep"></div>
+    <span class="nav-event">Copanina 2026</span>
+  </div>
+  <div class="nav-links">
+    <a href="#arena"     class="nav-link copa">⚽ Arena</a>
+    <a href="#quermesse" class="nav-link juna">🎪 Quermesse</a>
+    <a href="#participe" class="nav-link">Participe</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag"><span></span>Evento interno · Junho 2026</div>
+    <h1 class="hero-title">
+      <span class="copa">Copa</span><span class="nina">nina</span><br>dos Orlandinhos
+    </h1>
+    <p class="hero-sub">Vista a camisa · Traga sua tradição</p>
+    <p class="hero-tagline">
+      <strong>Copa e Festa Junina</strong> em um só lugar.<br>
+      Escalação, palpites, arraiá e muito mais.
+    </p>
+    <div class="hero-btns">
+      <a href="#arena"     class="btn-copa">⚽ Arena dos Orlandinhos</a>
+      <a href="#quermesse" class="btn-junina">🎪 Quermesse dos Orlandinhos</a>
+    </div>
+  </div>
+
+  <div class="hero-flags">
+    <span style="background:#009C3B"></span>
+    <span style="background:#FEDF00"></span>
+    <span style="background:#009C3B"></span>
+    <span style="background:#E8960A"></span>
+    <span style="background:#CC2929"></span>
+    <span style="background:#E8960A"></span>
+    <span style="background:#009C3B"></span>
+    <span style="background:#FEDF00"></span>
+    <span style="background:#009C3B"></span>
+  </div>
+</section>
+
+<!-- TEMA BAND -->
+<div class="tema-band">
+  <div class="tema-half copa">
+    <div class="tema-half-icon">⚽</div>
+    <div>
+      <div class="tema-half-label">Sessão Copa</div>
+      <div class="tema-half-title">Arena dos Orlandinhos</div>
+    </div>
+  </div>
+  <div class="tema-half junina">
+    <div class="tema-half-icon">🌽</div>
+    <div>
+      <div class="tema-half-label">Sessão Junina</div>
+      <div class="tema-half-title">Quermesse dos Orlandinhos</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     ARENA DOS ORLANDINHOS
+════════════════════════════════════════ -->
+<section id="arena" style="background:var(--green-l); border-top:4px solid var(--green);">
+<div class="wrap">
+
+  <div class="sec-header">
+    <div class="sec-tema st-copa">⚽ Arena dos Orlandinhos</div>
+    <h2 class="sec-title">Nossa cultura <span class="g">entra em campo</span></h2>
+    <p class="sec-sub">A seleção da Orla escalada por cliente. Palpites, times do coração e muita torcida.</p>
+  </div>
+
+  <!-- ESCALAÇÃO -->
+  <div class="subsec">
+    <div class="sub-header">
+      <div class="sub-tema sub-copa">⚽ Copa · Escalação</div>
+      <div class="sub-title">Álbum dos Orlandinhos</div>
+      <p class="sub-sub">Figurinhas reais do time — filtradas por cliente.</p>
+    </div>
+    <div class="album-filters" id="af">
+      <button class="af on"  onclick="filterAlbum('todos',this)">Todos</button>
+      <button class="af" onclick="filterAlbum('Aché',this)"             style="--tc:#E91E8C">Aché</button>
+      <button class="af" onclick="filterAlbum('ANBIMA',this)"           style="--tc:#7B5EA7">ANBIMA</button>
+      <button class="af" onclick="filterAlbum('Artesanal',this)"        style="--tc:#E65100">Artesanal</button>
+      <button class="af" onclick="filterAlbum('Orla Interno',this)"     style="--tc:#111111">Orla Interno</button>
+      <button class="af" onclick="filterAlbum('WeSafety',this)"         style="--tc:#0077B6">WeSafety</button>
+      <button class="af" onclick="filterAlbum('Papelzinho',this)"       style="--tc:#00BCD4">Papelzinho</button>
+      <button class="af" onclick="filterAlbum('Planejar',this)"         style="--tc:#2E7D32">Planejar</button>
+    </div>
+    <div class="album-grid" id="album-grid"></div>
+    <a href="https://forms.clickup.com/36992472/f/138xer-17191/KN0OLV18L5U1BKX64Y" target="_blank" class="sub-form copa">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      Enviar minha figurinha
+    </a>
+    <span class="sub-form-note">Mande sua foto, nome, cliente e posição. A equipe adiciona no álbum.</span>
+  </div>
+
+  <!-- ORLANDINHOS EM CAMPO -->
+  <div class="subsec">
+    <div class="sub-header">
+      <div class="sub-tema sub-copa">⚽ Copa · Torcida</div>
+      <div class="sub-title">Orlandinhos em Campo</div>
+      <p class="sub-sub">Fotos torcendo, decoração de mesa, memes, pets em clima de Copa.</p>
+    </div>
+    <div class="posts" id="posts-copa"></div>
+    <a href="https://forms.clickup.com/36992472/f/138xer-17191/KN0OLV18L5U1BKX64Y" target="_blank" class="sub-form copa">
+      <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+      Enviar foto torcendo
+    </a>
+    <span class="sub-form-note">Foto de verde e amarelo, decoração, meme ou pet em clima de Copa.</span>
+  </div>
+
+  <!-- PALPITES -->
+  <div class="subsec">
+    <div class="sub-header">
+      <div class="sub-tema sub-copa">⚽ Copa · Palpites</div>
+      <div class="sub-title">Quanto vai ser?</div>
+      <p class="sub-sub">O que o time acha dos próximos jogos do Brasil na Copa 2026.</p>
+    </div>
+    <div class="proximos-jogos">
+      <div class="pjogo"><span class="pjogo-data">19/06 · Philadelphia</span><span>🇧🇷 Brasil × Haiti 🇭🇹</span></div>
+      <div class="pjogo"><span class="pjogo-data">24/06 · Miami</span><span>🇧🇷 Brasil × Escócia 🏴󠁧󠁢󠁳󠁣󠁴󠁿</span></div>
+    </div>
+    <div class="palpites-grid" id="palpites"></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <a href="https://forms.clickup.com/36992472/f/138xer-17291/7MP4CO70PFCVEV476O" target="_blank" class="sub-form copa">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        🇭🇹 Palpite · Brasil × Haiti
+      </a>
+      <a href="https://forms.clickup.com/36992472/f/138xer-17211/9GK9H0VSNEHPQ0WZO0" target="_blank" class="sub-form copa">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        🏴󠁧󠁢󠁳󠁣󠁴󠁿 Palpite · Brasil × Escócia
+      </a>
+    </div>
+    <span class="sub-form-note">Qual o placar dos próximos jogos do Brasil? Mande seus palpites!</span>
+  </div>
+
+  <!-- TIME DO CORAÇÃO -->
+  <div class="subsec">
+    <div class="sub-header">
+      <div class="sub-tema sub-copa">⚽ Copa · Times</div>
+      <div class="sub-title">Meu Time do Coração</div>
+      <p class="sub-sub">Time favorito, jogador preferido e a Copa que marcou.</p>
+    </div>
+    <div class="time-grid" id="times"></div>
+    <a href="https://forms.clickup.com/36992472/f/138xer-17171/6TQTZ6W7YVTFWPCZPD" target="_blank" class="sub-form copa">
+      <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      Declarar meu time
+    </a>
+    <span class="sub-form-note">Time do coração, jogador favorito e a Copa que mais marcou.</span>
+  </div>
+
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     QUERMESSE DOS ORLANDINHOS
+════════════════════════════════════════ -->
+<section id="quermesse" style="background:var(--cream); border-top:4px solid var(--amber);">
+<div class="wrap">
+
+  <div class="sec-header">
+    <div class="sec-tema st-junina">🌽 Quermesse dos Orlandinhos</div>
+    <h2 class="sec-title">Equipe de <span class="y">milhões</span></h2>
+    <p class="sec-sub">Arraiá, forró e as tradições do Brasil inteiro. Aqui é quermesse!</p>
+  </div>
+
+  <!-- ÁLBUM DO ARRAIÁ -->
+  <div class="subsec">
+    <div class="sub-header">
+      <div class="sub-tema sub-junina">🎪 Junina · Fotos</div>
+      <div class="sub-title">Álbum do Arraiá</div>
+      <p class="sub-sub">Desfile caipira, foto antiga de festa junina, com amigos ou família.</p>
+    </div>
+    <div class="arraia-grid" id="arraia-grid"></div>
+    <a href="https://forms.clickup.com/36992472/f/138xer-17251/4WZ1Q4TYL8XAR2Q6E2" target="_blank" class="sub-form junina">
+      <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+      Enviar foto caipira
+    </a>
+    <span class="sub-form-note">Look caipira, festa junina da escola, com amigos ou família.</span>
+  </div>
+
+  <!-- MESA JUNINA -->
+  <div class="subsec">
+    <div class="sub-header">
+      <div class="sub-tema sub-junina">🌾 Junina · Mesa</div>
+      <div class="sub-title">Mesa Junina</div>
+      <p class="sub-sub">Receitas, tradições da região e memórias do arraiá.</p>
+    </div>
+    <div class="posts" id="posts-junina"></div>
+    <a href="https://forms.clickup.com/36992472/f/138xer-17111/UW128UDC5FOG5T2EVZ" target="_blank" class="sub-form junina">
+      <svg viewBox="0 0 24 24"><path d="M12 2c0 6-6 10-6 14a6 6 0 0012 0c0-4-6-8-6-14z"/></svg>
+      Compartilhar receita ou tradição
+    </a>
+    <span class="sub-form-note">Receita favorita da família ou a tradição junina da sua região.</span>
+  </div>
+
+  <!-- COMIDA FAVORITA -->
+  <div class="subsec">
+    <div class="sub-header">
+      <div class="sub-tema sub-junina">🗳️ Junina · Votação</div>
+      <div class="sub-title">Comida junina favorita</div>
+      <p class="sub-sub">O placar do paladar dos Orlandinhos.</p>
+    </div>
+    <div class="food-grid" id="food-grid"></div>
+    <a href="https://forms.clickup.com/36992472/f/138xer-17111/UW128UDC5FOG5T2EVZ" target="_blank" class="sub-form junina">
+      <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      Votar na minha comida favorita
+    </a>
+    <span class="sub-form-note">A equipe atualiza o placar com os votos recebidos.</span>
+  </div>
+
+  <!-- PLAYLIST -->
+  <div class="subsec">
+    <div class="sub-header">
+      <div class="sub-tema sub-junina">🎵 Junina · Playlist</div>
+      <div class="sub-title">Músicas que não podem faltar</div>
+      <p class="sub-sub">As pedidas da equipe para o arraiá.</p>
+    </div>
+    <div class="playlist" id="playlist"></div>
+    <a href="https://forms.clickup.com/36992472/f/138xer-17271/HRLMUV0942TLDLEJBXC" target="_blank" class="sub-form junina">
+      <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      Sugerir música
+    </a>
+    <span class="sub-form-note">Qual pedida não pode faltar no forró dos Orlandinhos?</span>
+  </div>
+
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PARTICIPE — resumo de todos os formulários
+     (os mesmos links também aparecem em cada seção acima)
+════════════════════════════════════════ -->
+<section id="participe" class="sec-border">
+<div class="wrap">
+
+  <div class="sec-header">
+    <div class="sec-tema st-both">Participe</div>
+    <h2 class="sec-title">Faça parte da <span class="g">Copa</span><span class="y">nina</span></h2>
+    <p class="sec-sub">Todos os formulários reunidos. Responda os que quiser — a equipe adiciona suas respostas nas seções acima.</p>
+  </div>
+
+  <div class="forms-grid">
+
+    <a href="https://forms.clickup.com/36992472/f/138xer-17191/KN0OLV18L5U1BKX64Y" target="_blank" class="form-link-card">
+      <div class="flc-icon">📸</div>
+      <div class="flc-tema flc-copa">⚽ Copa</div>
+      <div class="flc-title">Foto torcendo pelo Brasil</div>
+      <div class="flc-desc">De verde e amarelo — com família, amigos, pet ou decoração de mesa.</div>
+      <div class="flc-cta">Acessar formulário <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+
+    <a href="https://forms.clickup.com/36992472/f/138xer-17291/7MP4CO70PFCVEV476O" target="_blank" class="form-link-card">
+      <div class="flc-icon">🇭🇹</div>
+      <div class="flc-tema flc-copa">⚽ Copa</div>
+      <div class="flc-title">Palpite · Brasil × Haiti</div>
+      <div class="flc-desc">19/06 · Philadelphia — qual vai ser o placar?</div>
+      <div class="flc-cta">Acessar formulário <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+
+    <a href="https://forms.clickup.com/36992472/f/138xer-17211/9GK9H0VSNEHPQ0WZO0" target="_blank" class="form-link-card">
+      <div class="flc-icon">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
+      <div class="flc-tema flc-copa">⚽ Copa</div>
+      <div class="flc-title">Palpite · Brasil × Escócia</div>
+      <div class="flc-desc">24/06 · Miami — qual vai ser o placar?</div>
+      <div class="flc-cta">Acessar formulário <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+
+    <a href="https://forms.clickup.com/36992472/f/138xer-17171/6TQTZ6W7YVTFWPCZPD" target="_blank" class="form-link-card">
+      <div class="flc-icon">❤️</div>
+      <div class="flc-tema flc-copa">⚽ Copa</div>
+      <div class="flc-title">Meu time do coração</div>
+      <div class="flc-desc">Time, jogador favorito e a Copa que mais marcou sua vida.</div>
+      <div class="flc-cta">Acessar formulário <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+
+    <a href="https://forms.clickup.com/36992472/f/138xer-17191/KN0OLV18L5U1BKX64Y" target="_blank" class="form-link-card">
+      <div class="flc-icon">🎴</div>
+      <div class="flc-tema flc-copa">⚽ Copa</div>
+      <div class="flc-title">Figurinha na escalação</div>
+      <div class="flc-desc">Sua foto no álbum oficial. Informe nome, cliente e posição.</div>
+      <div class="flc-cta">Acessar formulário <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+
+    <a href="https://forms.clickup.com/36992472/f/138xer-17251/4WZ1Q4TYL8XAR2Q6E2" target="_blank" class="form-link-card">
+      <div class="flc-icon">🤠</div>
+      <div class="flc-tema flc-junina">🌽 Junina</div>
+      <div class="flc-title">Foto caipira / xadrez</div>
+      <div class="flc-desc">Look caipira, festa junina da escola ou com a família no arraiá.</div>
+      <div class="flc-cta">Acessar formulário <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+
+    <a href="https://forms.clickup.com/36992472/f/138xer-17111/UW128UDC5FOG5T2EVZ" target="_blank" class="form-link-card">
+      <div class="flc-icon">🍳</div>
+      <div class="flc-tema flc-junina">🌽 Junina</div>
+      <div class="flc-title">Receita ou tradição</div>
+      <div class="flc-desc">Receita favorita da família ou a tradição junina da sua região.</div>
+      <div class="flc-cta">Acessar formulário <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+
+    <a href="https://forms.clickup.com/36992472/f/138xer-17111/UW128UDC5FOG5T2EVZ" target="_blank" class="form-link-card">
+      <div class="flc-icon">🗳️</div>
+      <div class="flc-tema flc-junina">🌽 Junina</div>
+      <div class="flc-title">Comida favorita</div>
+      <div class="flc-desc">Vote na comida junina que não pode faltar no arraiá.</div>
+      <div class="flc-cta">Acessar formulário <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+
+    <a href="https://forms.clickup.com/36992472/f/138xer-17271/HRLMUV0942TLDLEJBXC" target="_blank" class="form-link-card">
+      <div class="flc-icon">🎵</div>
+      <div class="flc-tema flc-junina">🌽 Junina</div>
+      <div class="flc-title">Música do arraiá</div>
+      <div class="flc-desc">Sugira sua pedida para a playlist dos Orlandinhos.</div>
+      <div class="flc-cta">Acessar formulário <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+
+  </div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-logo">
+      <img src="assets/orla-logo-transparent.png" alt="ORLA" style="height:36px;width:auto;">
+      <span class="footer-event">Copanina dos Orlandinhos · Junho 2026</span>
+    </div>
+    <span class="footer-line">Vista a camisa, traga sua tradição.</span>
+  </div>
+</footer>
+
+<script>
+const TEAM_COLORS = {
+  'Aché':'#E91E8C','Águia/WeSafety':'#1565C0','ANBIMA':'#7B5EA7',
+  'Papelzinho':'#00BCD4','Planejar':'#2E7D32','Raia Drogasil':'#1B5E20',
+  'Orla Interno':'#111111','Artesanal':'#E65100'
+};
+const AV = ['av-g','av-y','av-r','av-b','av-p'];
+const gi = n => n.trim().split(/\s+/).map(w=>w[0]).join('').slice(0,2).toUpperCase();
+const gav = i => AV[i%AV.length];
+
+// ╔══════════════════════════════════════════════════════════════╗
+// ║                  ÁREA DE EDIÇÃO DE CONTEÚDO                 ║
+// ║                                                              ║
+// ║  Cada bloco abaixo controla uma seção do site.               ║
+// ║  Para adicionar uma entrada nova:                            ║
+// ║    1. Copie a linha marcada com "COPIE ESTA LINHA"           ║
+// ║    2. Cole logo abaixo da última entrada real do bloco       ║
+// ║    3. Troque os campos entre aspas pelos dados reais         ║
+// ║    4. Salve o arquivo — o site atualiza na próxima abertura  ║
+// ╚══════════════════════════════════════════════════════════════╝
+
+
+// ┌─────────────────────────────────────────────────────────────┐
+// │  SEÇÃO: ÁLBUM DOS ORLANDINHOS (Escalação)                   │
+// │  Onde aparece: Arena > Álbum dos Orlandinhos                │
+// │  Como adicionar: salve a foto em assets/ e cole uma linha   │
+// │                                                             │
+// │  Campos:                                                    │
+// │    n     → Nome completo da pessoa                          │
+// │    pos   → Posição no time (ex: Atacante, Goleiro, Meia...) │
+// │    team  → Nome do cliente (deve bater com o filtro)        │
+// │            Opções: Papelzinho · Planejar · ANBIMA ·         │
+// │            Artesanal · Orla Interno · Aché ·                │
+// │            Águia/WeSafety · Raia Drogasil                   │
+// │    img   → Caminho da foto dentro de assets/                │
+// └─────────────────────────────────────────────────────────────┘
+const ALBUM = [
+  {n:'Albert Oliveira',   pos:'Atacante',  team:'ANBIMA',       img:'assets/albert_oliveira.png'},
+  {n:'Amanda Lino',       pos:'Meia',      team:'Planejar',     img:'assets/amanda_lino.png'},
+  {n:'Ana Carolina',      pos:'Lateral',   team:'WeSafety',     img:'assets/ana_carolina.png'},
+  {n:'Davi Alexandre',    pos:'Volante',   team:'WeSafety',     img:'assets/davi_alexandre.png'},
+  {n:'Edgar Gueno',       pos:'Zagueiro',  team:'Planejar',     img:'assets/edgar_gueno.png'},
+  {n:'Eduarda Porto',     pos:'Lateral',   team:'Orla Interno', img:'assets/eduarda_porto.png'},
+  {n:'Gabriela Pantosi',  pos:'Meia',      team:'Aché',         img:'assets/gabriela_pantosi.png'},
+  {n:'Gustavo Maciel',    pos:'Volante',   team:'Planejar',     img:'assets/gustavo_maciel.png'},
+  {n:'Júlia Luz',         pos:'Atacante',  team:'ANBIMA',       img:'assets/julia_luz.png'},
+  {n:'Larissa Luzeti',    pos:'Lateral',   team:'ANBIMA',       img:'assets/larissa_luzeti.png'},
+  {n:'Lenilson Inhari',   pos:'Técnico',   team:'Artesanal',    img:'assets/lenilson_inhari.png'},
+  {n:'Lucas Iurak',       pos:'Goleiro',   team:'Planejar',     img:'assets/lucas_iurak.png'},
+  {n:'Luís Felipe',       pos:'Zagueiro',  team:'ANBIMA',       img:'assets/luis_felipe.png'},
+  {n:'Maicon Line',       pos:'Volante',   team:'ANBIMA',       img:'assets/maicon_line.png'},
+  {n:'Matheus de Paulo',  pos:'Atacante',  team:'Orla Interno', img:'assets/matheus_paulo.png'},
+  {n:'Nicole Cavallaro',  pos:'Meia',      team:'Aché',         img:'assets/nicole_cavallaro.png'},
+  {n:'Omar Jamih',        pos:'Atacante',  team:'Papelzinho',   img:'assets/omar_jamih.png'},
+  {n:'Pamela Milan',      pos:'Goleira',   team:'ANBIMA',       img:'assets/pamela_milan.png'},
+  {n:'Raquel Soares',     pos:'Meia',      team:'ANBIMA',       img:'assets/raquel_soares.png'},
+  {n:'Renata Dias',       pos:'Lateral',   team:'ANBIMA',       img:'assets/renata_dias.png'},
+  {n:'Tadeu Tomines',     pos:'Atacante',  team:'Papelzinho',   img:'assets/tadeu_tomines.png'},
+  {n:'Valéria Luna',      pos:'Zagueira',  team:'Planejar',     img:'assets/valeria_luna.png'},
+
+  // ▼ COPIE ESTA LINHA para adicionar uma nova figurinha ▼
+  // {n:'Nome Sobrenome', pos:'Posição', team:'Cliente', img:'assets/nome_foto.png'},
+];
+
+
+// ┌─────────────────────────────────────────────────────────────┐
+// │  SEÇÃO: ORLANDINHOS EM CAMPO (Fotos e posts de Copa)        │
+// │  Onde aparece: Arena > Orlandinhos em Campo                 │
+// │  Como adicionar: cole um bloco novo após o último           │
+// │                                                             │
+// │  Campos:                                                    │
+// │    author  → Nome de quem enviou                            │
+// │    time    → Horário do post (ex: '14:30')                  │
+// │    pinned  → true = fica fixo no topo / false = normal      │
+// │    img     → Foto (ex: 'assets/foto.jpg') ou null se texto  │
+// │    text    → Texto da publicação                            │
+// └─────────────────────────────────────────────────────────────┘
+const POSTS_COPA = [
+  {author:'Comitê ORLA', time:'08:00', cat:'copa', pinned:true, img:null,
+    text:'Bem-vindos à Copanina dos Orlandinhos! Vista a camisa, traga sua tradição. Copa e Festa Junina em um só lugar — explore a Arena e a Quermesse e participe pelos formulários.'},
+
+  // ▼ COPIE ESTE BLOCO para adicionar um novo post de Copa ▼
+  // {author:'Nome da Pessoa', time:'09:30', cat:'copa', pinned:false, img:null,
+  //   text:'Texto enviado pela pessoa pelo formulário.'},
+  //
+  // ▼ Se a pessoa enviou uma foto junto, use assim ▼
+  // {author:'Nome da Pessoa', time:'09:30', cat:'copa', pinned:false, img:'assets/nome_foto.jpg',
+  //   text:'Legenda da foto enviada.'},
+
+  {author:'Eduarda Porto', time:'09:30', cat:'copa', pinned:false, img:'assets/eduarda_jogo.jpg',
+    text:'Primeiro jogo da copaaaa 💚😭 chorei no gol do Marrocos. Mas sigo confiante!!!'},
+  {author:'Júlia Luz', time:'09:45', cat:'copa', pinned:false, img:'assets/julia_torcendo.jpg',
+    text:'Pronta para a Copa! 🇧🇷💛'},
+];
+
+
+// ┌─────────────────────────────────────────────────────────────┐
+// │  SEÇÃO: MESA JUNINA (Receitas e tradições)                  │
+// │  Onde aparece: Quermesse > Mesa Junina                      │
+// │  Como adicionar: cole um bloco novo após o último           │
+// │  (mesmos campos de POSTS_COPA acima)                        │
+// └─────────────────────────────────────────────────────────────┘
+const POSTS_JUNINA = [
+  {author:'Comitê ORLA', time:'08:05', cat:'junina', pinned:true, img:null,
+    text:'A Mesa Junina está posta! Compartilhe a receita da família ou a tradição da sua região pelo formulário — a equipe publica aqui.'},
+
+  // ▼ COPIE ESTE BLOCO para adicionar receita ou tradição ▼
+  // {author:'Nome da Pessoa', time:'10:45', cat:'junina', pinned:false, img:null,
+  //   text:'Receita ou tradição enviada pelo formulário.'},
+
+  {author:'Júlia Luz', time:'10:15', cat:'junina', pinned:false, img:'assets/julia_quentao.jpg',
+    text:'Sempre tem quentão feito pelas vovós! 🍵❤️ Tradição de família que não pode faltar na festa junina.'},
+];
+
+
+// ┌─────────────────────────────────────────────────────────────┐
+// │  SEÇÃO: PALPITES                                            │
+// │  Onde aparece: Arena > Quanto vai ser?                      │
+// │  Como adicionar: cole um bloco novo após o último           │
+// │                                                             │
+// │  Campos dentro de scores (um por jogo):                     │
+// │    t1, t2  → Nome dos times (time 1 e time 2)              │
+// │    f1, f2  → Bandeiras emoji (🇧🇷 🇦🇷 🇨🇴 🇪🇨 etc.)           │
+// │    p1, p2  → Placar apostado (números)                      │
+// └─────────────────────────────────────────────────────────────┘
+const PALPITES = [
+  {nome:'Eduarda Porto', img:'assets/eduarda_jogo.jpg', scores:[
+    {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:2, p2:0, data:'19/06 · Philadelphia'},
+    {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:2, p2:1, data:'24/06 · Miami'},
+  ]},
+  {nome:'Júlia Luz', img:'assets/julia_torcendo.jpg', scores:[
+    {t1:'Brasil', t2:'Haiti', f1:'🇧🇷', f2:'🇭🇹', p1:2, p2:1, data:'19/06 · Philadelphia'},
+  ]},
+
+  // ▼ COPIE ESTE BLOCO para adicionar um novo palpite ▼
+  // {nome:'Nome da Pessoa', scores:[
+  //   {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:0, p2:0, data:'19/06 · Philadelphia'},
+  //   {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:0, p2:0, data:'24/06 · Miami'},
+  // ]},
+];
+
+
+// ┌─────────────────────────────────────────────────────────────┐
+// │  SEÇÃO: MEU TIME DO CORAÇÃO                                 │
+// │  Onde aparece: Arena > Meu Time do Coração                  │
+// │  Como adicionar: cole uma linha nova após a última          │
+// │                                                             │
+// │  Campos:                                                    │
+// │    nome    → Nome de quem respondeu                         │
+// │    time    → Time do coração                                │
+// │    jogador → Jogador favorito                               │
+// │    copa    → Copa que mais marcou (ex: '2002')              │
+// └─────────────────────────────────────────────────────────────┘
+const TIMES = [
+  {nome:'Eduarda Porto', img:'assets/eduarda_corinthians.jpg', time:'Corinthians', jogador:'Yuri', historia:'Cresci acompanhando o amor do meu pai pelo Corinthians, e hoje sou eu que lembro ele quando é dia de jogo. 🖤'},
+
+  // ▼ COPIE ESTA LINHA para adicionar um novo time do coração ▼
+  // {nome:'Nome da Pessoa', time:'Nome do Time', jogador:'Jogador', copa:'Ano'},
+];
+
+
+// ┌─────────────────────────────────────────────────────────────┐
+// │  SEÇÃO: COMIDA JUNINA FAVORITA (Votação)                    │
+// │  Onde aparece: Quermesse > Comida junina favorita           │
+// │  Como atualizar: altere o número em 'votes' de cada item   │
+// │  conforme os votos chegam pelo formulário                   │
+// └─────────────────────────────────────────────────────────────┘
+const FOOD_VOTES = [
+  {key:'pamonha', emoji:'🌽', name:'Pamonha',       votes:0},
+  {key:'canjica', emoji:'🥣', name:'Canjica',       votes:1},
+  {key:'milho',   emoji:'🌽', name:'Milho cozido',  votes:0},
+  {key:'pede',    emoji:'🍫', name:'Pé de moleque', votes:0},
+  {key:'quentao', emoji:'🫖', name:'Quentão',       votes:0},
+  {key:'coxinha', emoji:'🍗', name:'Coxinha',       votes:0},
+  {key:'broa',    emoji:'🫓', name:'Broa de milho', votes:0},
+  {key:'arroz',   emoji:'🍚', name:'Arroz doce',    votes:0},
+
+  // ▼ COPIE ESTA LINHA para adicionar nova opção de comida ▼
+  // {key:'chave-unica', emoji:'🍡', name:'Nome do Prato', votes:0},
+];
+
+
+// ┌─────────────────────────────────────────────────────────────┐
+// │  SEÇÃO: PLAYLIST DO ARRAIÁ                                  │
+// │  Onde aparece: Quermesse > Músicas que não podem faltar     │
+// │  Como atualizar: altere 'votes' ou adicione novas músicas   │
+// │  conforme as sugestões chegam pelo formulário               │
+// └─────────────────────────────────────────────────────────────┘
+const PLAYLIST = [
+  {title:'Asa Branca',        artist:'Luiz Gonzaga',               votes:0},
+  {title:'Baião',             artist:'Luiz Gonzaga & H. Teixeira', votes:0},
+  {title:'Xote dos Milagres', artist:'Luiz Gonzaga',               votes:1},
+  {title:'Forró da Saudade',  artist:'Trio Nordestino',            votes:0},
+  {title:'Festa no Interior', artist:'Roberto Carlos',             votes:0},
+  {title:'Pisa na Fulô',      artist:'Luiz Gonzaga',               votes:0},
+
+  // ▼ COPIE ESTA LINHA para adicionar nova música sugerida ▼
+  // {title:'Nome da Música', artist:'Artista', votes:1},
+];
+
+
+// ┌─────────────────────────────────────────────────────────────┐
+// │  SEÇÃO: ÁLBUM DO ARRAIÁ (Fotos caipiras)                   │
+// │  Onde aparece: Quermesse > Álbum do Arraiá                  │
+// │  Como adicionar:                                            │
+// │    1. Salve a foto em assets/ (ex: assets/joao_caipira.jpg) │
+// │    2. Cole uma linha nova abaixo da última                  │
+// │  Enquanto vazio, aparecem cards de exemplo automaticamente  │
+// └─────────────────────────────────────────────────────────────┘
+const ARRAIA_SLOTS = [
+  // ▼ COPIE ESTA LINHA para adicionar uma foto caipira ▼
+  // {label:'Nome da Pessoa', img:'assets/nome_foto.jpg'},
+  {label:'Eduarda Porto', img:'assets/eduarda_junina.jpg'},
+];
+const ARRAIA_PLACEHOLDERS = ['Look caipira','Festa da escola','Com a família','Com os amigos','Foto antiga','Seu arraiá'];
+
+// ── RENDERS ───────────────────────────────────────────
+
+function renderAlbum(filter='todos') {
+  const list = filter==='todos' ? ALBUM : ALBUM.filter(a=>a.team===filter);
+  const g = document.getElementById('album-grid');
+  let h = list.map((s,i) => {
+    const color = TEAM_COLORS[s.team]||'#888';
+    return `<div class="acard">
+      ${s.img
+        ? `<img src="${s.img}" alt="${s.n}">`
+        : `<div class="acard-ph">${gi(s.n)}</div>`
+      }
+    </div>`;
+  }).join('');
+  if(!h) h = '<p style="color:var(--muted);font-size:13px;padding:12px 0">Nenhum Orlandinho neste time ainda.</p>';
+  g.innerHTML = h;
+}
+
+function filterAlbum(team, el) {
+  document.querySelectorAll('.af').forEach(c=>{c.classList.remove('on');c.style.cssText='';});
+  el.classList.add('on');
+  const color = TEAM_COLORS[team];
+  if(color) { el.style.background=color; el.style.borderColor=color; el.style.color='#fff'; }
+  else { el.style.background='var(--black)'; el.style.borderColor='var(--black)'; el.style.color='#fff'; }
+  renderAlbum(team);
+}
+
+function renderPosts(posts, containerId) {
+  document.getElementById(containerId).innerHTML = posts.map((p,i) => `
+    <div class="pcard ${p.pinned?'pinned':''}">
+      ${p.img?`<img src="${p.img}" class="pcard-img" alt="foto">`:''}
+      <div class="pcard-body">
+        ${p.pinned?'<div class="pcard-pin">📌 Fixado pela ORLA</div>':''}
+        <div class="pcard-top">
+          <div class="pcard-av ${gav(i)}">${gi(p.author)}</div>
+          <div class="pcard-meta">
+            <div class="pcard-author">${p.author}</div>
+            <div class="pcard-time">${p.time}</div>
+          </div>
+          <span class="ptag ptag-${p.cat}">${p.cat==='copa'?'⚽ Copa':'🌽 Junina'}</span>
+        </div>
+        <div class="pcard-text">${p.text}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderPalpites() {
+  if(PALPITES.length === 0) {
+    document.getElementById('palpites').innerHTML = '<p style="color:var(--muted);font-size:14px;padding:16px 0;text-align:center;">Nenhum palpite recebido ainda — seja o primeiro! 🇧🇷</p>';
+    return;
+  }
+  document.getElementById('palpites').innerHTML = PALPITES.map((p,i) => `
+    <div class="palcard">
+      <div class="palcard-top">
+        <div class="pcard-av ${gav(i)}">${gi(p.nome)}</div>
+        <div class="pcard-meta">
+          <div class="pcard-author">${p.nome}</div>
+        </div>
+        <span class="ptag ptag-copa">⚽ Copa</span>
+      </div>
+      <div class="palcard-scores">
+        ${p.scores.map(s=>`
+          <div class="palrow">
+            <div class="palteam">${s.f1} ${s.t1}</div>
+            <div class="palscore">
+              <span class="palnum">${s.p1}</span>
+              <span class="palx">×</span>
+              <span class="palnum">${s.p2}</span>
+            </div>
+            <div class="palteam r">${s.t2} ${s.f2}</div>
+          </div>`).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderTimes() {
+  if(TIMES.length === 0) {
+    document.getElementById('times').innerHTML = '<p style="color:var(--muted);font-size:14px;padding:16px 0;text-align:center;">Nenhuma declaração ainda — declare o seu time! ❤️</p>';
+    return;
+  }
+  document.getElementById('times').innerHTML = TIMES.map((t,i) => `
+    <div class="timecard">
+      ${t.img ? `<img src="${t.img}" class="pcard-img" alt="${t.nome}" style="border-radius:10px 10px 0 0;">` : `<div class="timecard-av ${gav(i)}">${gi(t.nome)}</div>`}
+      <div class="timecard-info">
+        <div class="timecard-nome">${t.nome}</div>
+        <div class="timecard-time">${t.time}</div>
+        ${t.jogador ? `<div class="timecard-extra">⚽ ${t.jogador}</div>` : ''}
+        ${t.historia ? `<div class="timecard-hist">${t.historia}</div>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderFood() {
+  const total = FOOD_VOTES.reduce((a,f)=>a+f.votes,0);
+  const max   = Math.max(...FOOD_VOTES.map(f=>f.votes));
+  document.getElementById('food-grid').innerHTML = [...FOOD_VOTES]
+    .sort((a,b)=>b.votes-a.votes)
+    .map(f => {
+      const pct = total > 0 ? Math.round(f.votes/total*100) : 0;
+      return `<div class="fooditem">
+        <span class="food-emoji">${f.emoji}</span>
+        <div class="food-name">${f.name}</div>
+        <div class="food-bar-bg"><div class="food-bar" style="width:${pct}%"></div></div>
+        <div class="food-count">${total > 0 ? f.votes + ' · ' + pct + '%' : '0 votos'}</div>
+      </div>`;
+    }).join('');
+}
+
+function renderPlaylist() {
+  document.getElementById('playlist').innerHTML = [...PLAYLIST]
+    .sort((a,b)=>b.votes-a.votes)
+    .map((m,i) => `
+      <div class="mrow">
+        <span class="mrank">${i+1}</span>
+        <div class="mdisc"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <div class="minfo">
+          <div class="mtitle">${m.title}</div>
+          <div class="martist">${m.artist}</div>
+        </div>
+        <span class="mvotes">${m.votes} votos</span>
+      </div>`).join('');
+}
+
+function renderArraia() {
+  const g = document.getElementById('arraia-grid');
+  let h = ARRAIA_SLOTS.map(s => `
+    <div class="arraia-slot" style="background:none;border:1px solid var(--border)">
+      <img src="${s.img}" alt="${s.label}" style="width:100%;height:100%;object-fit:cover;">
+      <div class="arraia-label" style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.6);color:#fff;font-size:11px;font-weight:700;padding:5px 8px;text-align:center;">${s.label}</div>
+    </div>`).join('');
+  const empties = Math.max(0, 6 - ARRAIA_SLOTS.length);
+  for(let i=0; i<empties; i++) {
+    h += `<div class="arraia-slot">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      <span>${ARRAIA_PLACEHOLDERS[i % ARRAIA_PLACEHOLDERS.length]}</span>
+    </div>`;
+  }
+  g.innerHTML = h;
+}
+
+// ── INIT ─────────────────────────────────────────────
+renderAlbum();
+renderPosts(POSTS_COPA, 'posts-copa');
+renderPosts(POSTS_JUNINA, 'posts-junina');
+renderPalpites();
+renderTimes();
+renderFood();
+renderPlaylist();
+renderArraia();
+
+// Nav highlight
+window.addEventListener('scroll', () => {
+  const y = window.scrollY + 80;
+  [['arena','copa'],['quermesse','juna']].forEach(([id,cls]) => {
+    const el = document.getElementById(id);
+    const a  = document.querySelector(`.nav-link.${cls}`);
+    if(!el||!a) return;
+    const active = y >= el.offsetTop && y < el.offsetTop + el.offsetHeight;
+    a.style.color          = active ? '#fff' : '';
+    a.style.borderBottom   = active ? '3px solid var(--yellow)' : '';
+  });
+}, {passive:true});
+</script>
+</body>
+</html>
