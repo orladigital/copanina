@@ -262,7 +262,7 @@ img { display:block; max-width:100%; }
 }
 .pcard:hover { box-shadow:0 4px 16px rgba(0,0,0,.06); }
 .pcard.pinned { border-left:3px solid var(--yellow); }
-.pcard-img { width:auto; max-width:160px; max-height:200px; height:auto; display:block; object-fit:cover; flex-shrink:0; border-radius:0; }
+.pcard-img { width:160px; height:160px; display:block; object-fit:cover; flex-shrink:0; border-radius:0; }
 .pcard-body { padding:14px 16px; flex:1; min-width:0; }
 .pcard-pin {
   font-size:10px; font-weight:800; letter-spacing:1px; text-transform:uppercase;
@@ -316,7 +316,7 @@ img { display:block; max-width:100%; }
 .palx   { font-size:11px; color:var(--muted); }
 
 /* ── TIME DO CORAÇÃO ── */
-.time-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px; }
+.time-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(420px,1fr)); gap:12px; }
 .timecard {
   background:var(--white); border:1px solid var(--border);
   border-radius:14px; padding:16px 18px;
