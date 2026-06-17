@@ -341,7 +341,7 @@ img { display:block; max-width:100%; }
 }
 .fooditem.winner { border-color:var(--amber); background:var(--amber-l); }
 .food-emoji { font-size:28px; display:block; margin-bottom:8px; }
-.food-name  { font-size:11px; font-weight:700; margin-bottom:6px; }
+.food-name  { font-size:11px; font-weight:700; margin-bottom:6px; min-height:2.6em; line-height:1.3; display:flex; align-items:center; justify-content:center; }
 .food-bar-bg { height:4px; border-radius:2px; background:var(--border); margin-bottom:5px; overflow:hidden; }
 .food-bar    { height:100%; border-radius:2px; background:var(--amber); }
 .food-count  { font-size:10px; font-weight:700; color:var(--amber); }
