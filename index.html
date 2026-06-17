@@ -98,7 +98,8 @@
       <button class="af" onclick="filterAlbum('ANBIMA',this)"           style="--tc:#7B5EA7">ANBIMA</button>
       <button class="af" onclick="filterAlbum('Artesanal',this)"        style="--tc:#E65100">Artesanal</button>
       <button class="af" onclick="filterAlbum('Orla Interno',this)"     style="--tc:#111111">Orla Interno</button>
-      <button class="af" onclick="filterAlbum('WeSafety',this)"         style="--tc:#0077B6">WeSafety</button>
+      <button class="af" onclick="filterAlbum('WeSafety/Águia Branca',this)" style="--tc:#0077B6">WeSafety/Águia Branca</button>
+      <button class="af" onclick="filterAlbum('Oakberry',this)"          style="--tc:#7CB518">Oakberry</button>
       <button class="af" onclick="filterAlbum('Papelzinho',this)"       style="--tc:#00BCD4">Papelzinho</button>
       <button class="af" onclick="filterAlbum('Planejar',this)"         style="--tc:#2E7D32">Planejar</button>
     </div>
@@ -347,9 +348,9 @@
 
 <script>
 const TEAM_COLORS = {
-  'Aché':'#E91E8C','Águia/WeSafety':'#1565C0','ANBIMA':'#7B5EA7',
+  'Aché':'#E91E8C','WeSafety/Águia Branca':'#0077B6','ANBIMA':'#7B5EA7',
   'Papelzinho':'#00BCD4','Planejar':'#2E7D32','Raia Drogasil':'#1B5E20',
-  'Orla Interno':'#111111','Artesanal':'#E65100'
+  'Orla Interno':'#111111','Artesanal':'#E65100','Oakberry':'#7CB518'
 };
 const AV = ['av-g','av-y','av-r','av-b','av-p'];
 const gi = n => n.trim().split(/\s+/).map(w=>w[0]).join('').slice(0,2).toUpperCase();
@@ -384,9 +385,9 @@ const gav = i => AV[i%AV.length];
 const ALBUM = [
   {n:'Albert Oliveira',   team:'ANBIMA',       img:'assets/albert_oliveira.png'},
   {n:'Amanda Lino',       team:'Planejar',     img:'assets/amanda_lino.png'},
-  {n:'Ana Carolina',      team:'WeSafety',     img:'assets/ana_carolina.png'},
+  {n:'Ana Carolina',      team:'WeSafety/Águia Branca',     img:'assets/ana_carolina.png'},
   {n:'Caique Oliveira',   team:'ANBIMA',       img:'assets/caique_oliveira.png'},
-  {n:'Davi Alexandre',    team:'WeSafety',     img:'assets/davi_alexandre.png'},
+  {n:'Davi Alexandre',    team:'WeSafety/Águia Branca',     img:'assets/davi_alexandre.png'},
   {n:'Edgar Gueno',       team:'Planejar',     img:'assets/edgar_gueno.png'},
   {n:'Eduarda Porto',     team:'Orla Interno', img:'assets/eduarda_porto.png'},
   {n:'Erick Ferreira',    team:'ANBIMA',       img:'assets/erick_ferreira.png'},
@@ -410,7 +411,7 @@ const ALBUM = [
   {n:'Raquel Soares',     team:'ANBIMA',       img:'assets/raquel_soares.png'},
   {n:'Renata Dias',       team:'ANBIMA',       img:'assets/renata_dias.png'},
   {n:'Tadeu Tomines',     team:'Papelzinho',   img:'assets/tadeu_tomines.png'},
-  {n:'Tallys Roberto',    team:'WeSafety',     img:'assets/tallys_roberto.png'},
+  {n:'Tallys Roberto',    team:'WeSafety/Águia Branca',     img:'assets/tallys_roberto.png'},
   {n:'Valéria Luna',      team:'Planejar',     img:'assets/valeria_luna.png'},
   {n:'Vinicius Cantilio', team:'Planejar',     img:'assets/vinicius_cantilio.png'},
 
@@ -582,6 +583,8 @@ const FOOD_VOTES = [
   {key:'pacoca',  emoji:'🥜', name:'Paçoca',              votes:1},
   {key:'pinhao',  emoji:'🫘', name:'Pinhão',              votes:1},
   {key:'pao',     emoji:'🥖', name:'Pão com carne louca', votes:1},
+
+  {key:'vatapa',  emoji:'🍲', name:'Vatapá',              votes:0},
 
   // ▼ COPIE ESTA LINHA para adicionar nova opção de comida ▼
   // {key:'chave-unica', emoji:'🍡', name:'Nome do Prato', votes:0},
