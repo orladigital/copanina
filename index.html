@@ -101,6 +101,7 @@
       <button class="af" onclick="filterAlbum('WeSafety/Águia Branca',this)" style="--tc:#0077B6">WeSafety/Águia Branca</button>
       <button class="af" onclick="filterAlbum('Oakberry',this)"          style="--tc:#7CB518">Oakberry</button>
       <button class="af" onclick="filterAlbum('Papelzinho',this)"       style="--tc:#00BCD4">Papelzinho</button>
+      <button class="af" onclick="filterAlbum('Manipulae',this)"        style="--tc:#009688">Manipulae</button>
       <button class="af" onclick="filterAlbum('Planejar',this)"         style="--tc:#2E7D32">Planejar</button>
     </div>
     <div class="album-grid" id="album-grid"></div>
@@ -350,7 +351,7 @@
 const TEAM_COLORS = {
   'Aché':'#E91E8C','WeSafety/Águia Branca':'#0077B6','ANBIMA':'#7B5EA7',
   'Papelzinho':'#00BCD4','Planejar':'#2E7D32','Raia Drogasil':'#1B5E20',
-  'Orla Interno':'#111111','Artesanal':'#E65100','Oakberry':'#7CB518','Nexus':'#6C63FF'
+  'Orla Interno':'#111111','Artesanal':'#E65100','Oakberry':'#7CB518','Manipulae':'#009688'
 };
 const AV = ['av-g','av-y','av-r','av-b','av-p'];
 const gi = n => n.trim().split(/\s+/).map(w=>w[0]).join('').slice(0,2).toUpperCase();
@@ -403,19 +404,25 @@ const ALBUM = [
   {n:'Flora Koti',          team:'Papelzinho',              img:'assets/flora_koti.png'},
   {n:'Gabriela Pantosi',    team:'Aché',                    img:'assets/gabriela_pantosi.png'},
   {n:'Gilvan Silva',        team:'Aché',                    img:'assets/gilvan_silva.png'},
+  {n:'Guilherme Borges',    team:'Orla Interno',            img:'assets/guilherme_borges.png'},
   {n:'Gustavo Maciel',      team:'Planejar',                img:'assets/gustavo_maciel.png'},
+  {n:'Herison Maciel',      team:'ANBIMA',                  img:'assets/herisson_maciel.png'},
   {n:'João Felipe',         team:'Papelzinho',              img:'assets/joao_felipe.png'},
   {n:'Jonatas Faria',       team:'Oakberry',                img:'assets/jonatas_faria.png'},
   {n:'José Elder',          team:'WeSafety/Águia Branca',   img:'assets/jose_elder.png'},
   {n:'Judson Kerller',      team:'ANBIMA',                  img:'assets/judson_kerller.png'},
   {n:'Júlia Luz',           team:'ANBIMA',                  img:'assets/julia_luz.png'},
+  {n:'Kevin Couto',         team:'Manipulae',               img:'assets/kevin_couto.png'},
   {n:'Larissa Luzeti',      team:'ANBIMA',                  img:'assets/larissa_luzeti.png'},
   {n:'Lenilson Inhari',     team:'Artesanal',               img:'assets/lenilson_inhari.png'},
   {n:'Lucas Iurak',         team:'Planejar',                img:'assets/lucas_iurak.png'},
   {n:'Lucas Ribeiro',       team:'ANBIMA',                  img:'assets/lucas_ribeiro.png'},
   {n:'Lucas Zanatta',       team:'Papelzinho',              img:'assets/lucas_zanatta.png'},
+  {n:'Luciana Shinohara',   team:'WeSafety/Águia Branca',   img:'assets/luciana_shinohara.png'},
   {n:'Luís Felipe',         team:'ANBIMA',                  img:'assets/luis_felipe.png'},
   {n:'Luis Fernando',       team:'ANBIMA',                  img:'assets/luis_fernando.png'},
+  {n:'Luiz Henrique',       team:'ANBIMA',                  img:'assets/luiz_henrique.png'},
+  {n:'Maganez Filho',       team:'ANBIMA',                  img:'assets/maganez_filho.png'},
   {n:'Marina Hott',         team:'ANBIMA',                  img:'assets/marina_hott.png'},
   {n:'Maycon Line',         team:'ANBIMA',                  img:'assets/maicon_line.png'},
   {n:'Matheus de Paulo',    team:'Orla Interno',            img:'assets/matheus_paulo.png'},
@@ -423,6 +430,7 @@ const ALBUM = [
   {n:'Omar Jamih',          team:'Papelzinho',              img:'assets/omar_jamih.png'},
   {n:'Pamela Milan',        team:'ANBIMA',                  img:'assets/pamela_milan.png'},
   {n:'Pedro Henrique',      team:'WeSafety/Águia Branca',   img:'assets/pedro_henrique.png'},
+  {n:'Rafael Panhoca',      team:'ANBIMA',                  img:'assets/rafael_panhoca.png'},
   {n:'Raquel Soares',       team:'ANBIMA',                  img:'assets/raquel_soares.png'},
   {n:'Renata Dias',         team:'ANBIMA',                  img:'assets/renata_dias.png'},
   {n:'Tadeu Tomines',       team:'Papelzinho',              img:'assets/tadeu_tomines.png'},
@@ -502,7 +510,7 @@ const POSTS_JUNINA = [
 const PALPITES = [
   {nome:'Alessandro Saldanha', scores:[
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:2, p2:1, data:'19/06 · Philadelphia'},
-    {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:2, p2:3, data:'24/06 · Miami'},
+    {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:3, p2:2, data:'24/06 · Miami'},
   ]},
   {nome:'Amanda Baião', scores:[
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:3, p2:1, data:'19/06 · Philadelphia'},
@@ -528,7 +536,7 @@ const PALPITES = [
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:2, p2:0, data:'19/06 · Philadelphia'},
     {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:2, p2:1, data:'24/06 · Miami'},
   ]},
-  {nome:'Emily Morimoto', scores:[
+  {nome:'Emily Morimoto', img:'assets/eduarda_jogo.jpg', scores:[
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:2, p2:1, data:'19/06 · Philadelphia'},
   ]},
   {nome:'Flavio Cordeiro', scores:[
@@ -544,6 +552,19 @@ const PALPITES = [
   ]},
   {nome:'Guilherme Borges', scores:[
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:1, p2:0, data:'19/06 · Philadelphia'},
+  ]},
+  {nome:'Herison Maciel', scores:[
+    {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:3, p2:1, data:'19/06 · Philadelphia'},
+    {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴', p1:3, p2:1, data:'24/06 · Miami'},
+  ]},
+  {nome:'José Elder', scores:[
+    {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:3, p2:0, data:'19/06 · Philadelphia'},
+  ]},
+  {nome:'José Neto', scores:[
+    {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:2, p2:1, data:'19/06 · Philadelphia'},
+  ]},
+  {nome:'Judson Kerller', scores:[
+    {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:1, p2:1, data:'19/06 · Philadelphia'},
   ]},
   {nome:'Júlia Luz', img:'assets/julia_torcendo.jpg', scores:[
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:2, p2:1, data:'19/06 · Philadelphia'},
@@ -588,6 +609,9 @@ const PALPITES = [
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:2, p2:0, data:'19/06 · Philadelphia'},
     {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:1, p2:0, data:'24/06 · Miami'},
   ]},
+  {nome:'Valeria Luna', scores:[
+    {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴', p1:2, p2:1, data:'24/06 · Miami'},
+  ]},
 
   // ▼ COPIE ESTE BLOCO para adicionar um novo palpite ▼
   // {nome:'Nome da Pessoa', scores:[
@@ -616,6 +640,7 @@ const TIMES = [
   {nome:'José Elder', img:'assets/elder_corinthians.jpg', time:'Corinthians', jogador:'Emerson Sheik', historia:'Era pra eu torcer para o Palmeiras, mas o meu tio foi esperto em ja comprar uma roupa de recém nascido do Corinthians pra convencer minha mãe e me vestir de corinthiano desde do dia 1 de vida kkk'},
   {nome:'Larissa Luzeti', img:'assets/larissa_corinthians.png', time:'Corinthians', historia:'Na faculdade de Arquitetura, uma professora que trabalhava na Subprefeitura de Itaquera convidou nossa turma para visitar as obras do estádio, em 2013. Eu tinha apenas 20 anos na época e foi uma experiência muito legal! E tem um detalhe especial: eu estava usando uma camisa do Ronaldo Fenômeno.'},
   {nome:'Maycon Line', img:'assets/maycon_vasco.jpeg', time:'Vasco da Gama', jogador:'Edmundo', historia:'Vascaíno não desiste nunca!'},
+  {nome:'Luciana Shinohara', img:'assets/luciana_spfc.jpeg', time:'São Paulo', jogador:'Raí', historia:'Meu pai era são paulino roxo, então cresci assistindo à era de ouro do São Paulo, sendo tricampeão mundial e, em sequência, conquistando três títulos consecutivos do Brasileiro. Infelizmente, daí para frente, só para trás kkkry, mas 2011 foi marcante demais por ver o centésimo gol do Ceni contra o curintia <3'},
   {nome:'Raquel Soares', img:'assets/raquel_corinthians.jpeg', time:'Corinthians', jogador:'Ronaldo Fenomeno', historia:'Tenho várias memórias boas e muito significativas com o coringão, mas a melhor com certeza é a do primeiro jogo que fui sozinha. Corinthians foi um divisor de águas na minha vida e segue sendo assim, quase uma religião, um estilo de vida. Minha vida, minha história, meu amor 🖤'},
 
   // ▼ COPIE ESTA LINHA para adicionar um novo time do coração ▼
@@ -630,17 +655,17 @@ const TIMES = [
 // │  conforme os votos chegam pelo formulário                   │
 // └─────────────────────────────────────────────────────────────┘
 const FOOD_VOTES = [
-  {key:'pamonha', emoji:'🫔', name:'Pamonha',             votes:8},
-  {key:'canjica', emoji:'🥣', name:'Canjica',             votes:12},
-  {key:'milho',   emoji:'🌽', name:'Milho cozido',        votes:12},
+  {key:'pamonha', emoji:'🫔', name:'Pamonha',             votes:10},
+  {key:'canjica', emoji:'🥣', name:'Canjica',             votes:15},
+  {key:'milho',   emoji:'🌽', name:'Milho cozido',        votes:16},
   {key:'pede',    emoji:'🍫', name:'Pé de moleque',       votes:7},
-  {key:'quentao', emoji:'🫖', name:'Quentão',             votes:4},
-  {key:'arroz',   emoji:'🍚', name:'Arroz doce',          votes:6},
-  {key:'hotdog',  emoji:'🌭', name:'Cachorro Quente',     votes:11},
-  {key:'popcorn', emoji:'🍿', name:'Pipoca',              votes:2},
-  {key:'pacoca',  emoji:'🥜', name:'Paçoca',              votes:7},
-  {key:'pinhao',  emoji:'🫘', name:'Pinhão',              votes:4},
-  {key:'pao',     emoji:'🥖', name:'Pão com carne louca', votes:8},
+  {key:'quentao', emoji:'🫖', name:'Quentão',             votes:5},
+  {key:'arroz',   emoji:'🍚', name:'Arroz doce',          votes:7},
+  {key:'hotdog',  emoji:'🌭', name:'Cachorro Quente',     votes:13},
+  {key:'popcorn', emoji:'🍿', name:'Pipoca',              votes:4},
+  {key:'pacoca',  emoji:'🥜', name:'Paçoca',              votes:9},
+  {key:'pinhao',  emoji:'🫘', name:'Pinhão',              votes:5},
+  {key:'pao',     emoji:'🥖', name:'Pão com carne louca', votes:11},
 
   // ▼ COPIE ESTA LINHA para adicionar nova opção de comida ▼
   // {key:'chave-unica', emoji:'🍡', name:'Nome do Prato', votes:0},
@@ -654,14 +679,16 @@ const FOOD_VOTES = [
 // │  conforme as sugestões chegam pelo formulário               │
 // └─────────────────────────────────────────────────────────────┘
 const PLAYLIST = [
-  {title:'Xote dos Milagres',         artist:'Luiz Gonzaga',     votes:1},
-  {title:'Forró de Cabo A Rabo',      artist:'Luiz Gonzaga',     votes:1},
-  {title:'Aerials (Quadrilha Cover)', artist:'System of a Down', votes:1},
-  {title:'Petrolina Juazeiro',        artist:'Luiz Gonzaga',     votes:1},
-  {title:'Sapatilha 37',              artist:'Elba Ramalho',     votes:1},
-  {title:'Anunciação',                artist:'Estakazero',       votes:1},
-  {title:'Clima de Rodeio',           artist:'Dallas Company',   votes:1},
-  {title:'Nosso Xote',                artist:'Bicho de pé',      votes:1},
+  {title:'Xote dos Milagres',         artist:'Luiz Gonzaga',               votes:2},
+  {title:'Forró de Cabo A Rabo',      artist:'Luiz Gonzaga',               votes:1},
+  {title:'Aerials (Quadrilha Cover)', artist:'System of a Down',           votes:1},
+  {title:'Petrolina Juazeiro',        artist:'Luiz Gonzaga',               votes:1},
+  {title:'Sapatilha 37' ,             artist:'Elba Ramalho',               votes:1},
+  {title:'Anunciação',                artist:'Estakazero',                 votes:1},
+  {title:'Clima de Rodeio',           artist:'Dallas Company',             votes:1},
+  {title:'Nosso Xote',                artist:'Bicho de pé',                votes:1},
+  {title:'Cheiro da Karolina',        artist:'Luiz Poderoso Chefão',       votes:1},
+  {title:'Esperando na janela',       artist:'Gilberto Gil',               votes:1},
 
   // ▼ COPIE ESTA LINHA para adicionar nova música sugerida ▼
   // {title:'Nome da Música', artist:'Artista', votes:1},
@@ -685,7 +712,9 @@ const ARRAIA_SLOTS = [
   {label:'Júlia Luz',     img:'assets/julia_junina.jpeg'},
   {label:'Júlia Luz',     img:'assets/julia_junina_.jpeg'},
   {label:'Júlia Luz',     img:'assets/ju_junina.jpeg'},
-  {label:'Júlia Luz',     img:'assets/ju_luz_junina.jpeg'},
+  {label:'Júlia Luz',      img:'assets/ju_luz_junina.jpeg'},
+  {label:'Aline Balazina', img:'assets/aline_junina.jpeg'},
+  {label:'José Neto',      img:'assets/neto_junina.jpeg'},
 ];
 const ARRAIA_PLACEHOLDERS = ['Look caipira','Festa da escola','Com a família','Com os amigos','Foto antiga','Seu arraiá'];
 
