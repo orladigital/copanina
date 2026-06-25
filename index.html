@@ -391,6 +391,7 @@ const ALBUM = [
   {n:'Amanda Lino',         team:'Planejar',                img:'assets/amanda_lino.png'},
   {n:'Ana Carolina',        team:'WeSafety/Águia Branca',   img:'assets/ana_carolina.png'},
   {n:'André Enes',          team:'WeSafety/Águia Branca',   img:'assets/andre_enes.png'},
+  {n:'Beatriz Machado',     team:'ANBIMA',                  img:'assets/beatriz_machado.png'},
   {n:'Bianca Soares',       team:'ANBIMA',                  img:'assets/bianca_soares.png'},
   {n:'Caique Oliveira',     team:'ANBIMA',                  img:'assets/caique_oliveira.png'},
   {n:'Cleyton Gusmão',      team:'WeSafety/Águia Branca',   img:'assets/cleyton_gusmao.png'},
@@ -406,7 +407,7 @@ const ALBUM = [
   {n:'Gilvan Silva',        team:'Aché',                    img:'assets/gilvan_silva.png'},
   {n:'Guilherme Borges',    team:'Orla Interno',            img:'assets/guilherme_borges.png'},
   {n:'Gustavo Maciel',      team:'Planejar',                img:'assets/gustavo_maciel.png'},
-  {n:'Herison Maciel',      team:'ANBIMA',                  img:'assets/herisson_maciel.png'},
+  {n:'Herison Maciel',      team:'ANBIMA',                  img:'assets/herison_maciel.png'},
   {n:'João Felipe',         team:'Papelzinho',              img:'assets/joao_felipe.png'},
   {n:'Jonatas Faria',       team:'Oakberry',                img:'assets/jonatas_faria.png'},
   {n:'José Elder',          team:'WeSafety/Águia Branca',   img:'assets/jose_elder.png'},
@@ -424,8 +425,9 @@ const ALBUM = [
   {n:'Luiz Henrique',       team:'ANBIMA',                  img:'assets/luiz_henrique.png'},
   {n:'Maganez Filho',       team:'ANBIMA',                  img:'assets/maganez_filho.png'},
   {n:'Marina Hott',         team:'ANBIMA',                  img:'assets/marina_hott.png'},
-  {n:'Maycon Line',         team:'ANBIMA',                  img:'assets/maicon_line.png'},
   {n:'Matheus de Paulo',    team:'Orla Interno',            img:'assets/matheus_paulo.png'},
+  {n:'Maycon Line',         team:'ANBIMA',                  img:'assets/maicon_line.png'},
+  {n:'Mohamad Jameh',       team:'Orla Interno',            img:'assets/mohamad_jameh.png'},
   {n:'Nicole Cavallaro',    team:'Aché',                    img:'assets/nicole_cavallaro.png'},
   {n:'Omar Jamih',          team:'Papelzinho',              img:'assets/omar_jamih.png'},
   {n:'Pamela Milan',        team:'ANBIMA',                  img:'assets/pamela_milan.png'},
@@ -475,6 +477,10 @@ const POSTS_COPA = [
     text:'se tem copa, esquece! é na Caze TV'},
   {author:'Carol Almeida', time:'16:30', cat:'copa', pinned:false, img:'assets/carol_torcendo.jpg',
     text:'A turma que assistiu ao empate comigo'},
+  {author:'Amanda Baião', time:'09:10', cat:'copa', pinned:false, img:'assets/amanda_torcendo.jpeg',
+    text:'Tá valendo breguice pra torcer???'},
+  {author:'Emily Morimoto', time:'13:40', cat:'copa', pinned:false, img:'assets/emily_torcendo.jpeg',
+    text:'Minha seleção convocada pra assistir os jogos do Brasilzão 💛💚💙'},
 ];
 
 
@@ -515,6 +521,9 @@ const PALPITES = [
   {nome:'Amanda Baião', scores:[
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:3, p2:1, data:'19/06 · Philadelphia'},
     {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:2, p2:3, data:'24/06 · Miami'},
+  ]},
+  {nome:'Amanda Lino', scores:[
+    {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:1, p2:1, data:'24/06 · Miami'},
   ]},
   {nome:'André Enes', scores:[
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:2, p2:0, data:'19/06 · Philadelphia'},
@@ -569,6 +578,9 @@ const PALPITES = [
   {nome:'Júlia Luz', img:'assets/julia_torcendo.jpg', scores:[
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:2, p2:1, data:'19/06 · Philadelphia'},
   ]},
+  {nome:'Kevin Couto', scores:[
+    {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:2, p2:0, data:'24/06 · Miami'},
+  ]},
   {nome:'Larissa Luzeti', scores:[
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:2, p2:1, data:'19/06 · Philadelphia'},
     {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:1, p2:1, data:'24/06 · Miami'},
@@ -586,9 +598,11 @@ const PALPITES = [
   ]},
   {nome:'Maganez Filho', scores:[
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:4, p2:0, data:'19/06 · Philadelphia'},
+    {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:4, p2:0, data:'24/06 · Miami'},
   ]},
   {nome:'Matheus Paulo', scores:[
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:4, p2:0, data:'19/06 · Philadelphia'},
+    {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:5, p2:0, data:'24/06 · Miami'},
   ]},
   {nome:'Maycon Line', scores:[
     {t1:'Brasil', t2:'Haiti',   f1:'🇧🇷', f2:'🇭🇹', p1:7, p2:1, data:'19/06 · Philadelphia'},
@@ -610,7 +624,7 @@ const PALPITES = [
     {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:1, p2:0, data:'24/06 · Miami'},
   ]},
   {nome:'Valeria Luna', scores:[
-    {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴', p1:2, p2:1, data:'24/06 · Miami'},
+    {t1:'Brasil', t2:'Escócia', f1:'🇧🇷', f2:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', p1:2, p2:1, data:'24/06 · Miami'},
   ]},
 
   // ▼ COPIE ESTE BLOCO para adicionar um novo palpite ▼
@@ -640,6 +654,7 @@ const TIMES = [
   {nome:'José Elder', img:'assets/elder_corinthians.jpg', time:'Corinthians', jogador:'Emerson Sheik', historia:'Era pra eu torcer para o Palmeiras, mas o meu tio foi esperto em ja comprar uma roupa de recém nascido do Corinthians pra convencer minha mãe e me vestir de corinthiano desde do dia 1 de vida kkk'},
   {nome:'Larissa Luzeti', img:'assets/larissa_corinthians.png', time:'Corinthians', historia:'Na faculdade de Arquitetura, uma professora que trabalhava na Subprefeitura de Itaquera convidou nossa turma para visitar as obras do estádio, em 2013. Eu tinha apenas 20 anos na época e foi uma experiência muito legal! E tem um detalhe especial: eu estava usando uma camisa do Ronaldo Fenômeno.'},
   {nome:'Maycon Line', img:'assets/maycon_vasco.jpeg', time:'Vasco da Gama', jogador:'Edmundo', historia:'Vascaíno não desiste nunca!'},
+  {nome:'Emily Morimoto', img:'assets/emily_maringa.jpeg', time:'Maringá', historia:'O time do Maringá-FC foi criado em 2010 e desde então vem subindo nas suas classificações; tanto que hoje estamos na série C 🤪. Esse dia foi muito importante porque meu pai sempre quis ir no jogo e eu tive a oportunidade de ir com ele 💚🖤🤍'},
   {nome:'Luciana Shinohara', img:'assets/luciana_spfc.jpeg', time:'São Paulo', jogador:'Raí', historia:'Meu pai era são paulino roxo, então cresci assistindo à era de ouro do São Paulo, sendo tricampeão mundial e, em sequência, conquistando três títulos consecutivos do Brasileiro. Infelizmente, daí para frente, só para trás kkkry, mas 2011 foi marcante demais por ver o centésimo gol do Ceni contra o curintia <3'},
   {nome:'Raquel Soares', img:'assets/raquel_corinthians.jpeg', time:'Corinthians', jogador:'Ronaldo Fenomeno', historia:'Tenho várias memórias boas e muito significativas com o coringão, mas a melhor com certeza é a do primeiro jogo que fui sozinha. Corinthians foi um divisor de águas na minha vida e segue sendo assim, quase uma religião, um estilo de vida. Minha vida, minha história, meu amor 🖤'},
 
@@ -657,12 +672,12 @@ const TIMES = [
 const FOOD_VOTES = [
   {key:'pamonha', emoji:'🫔', name:'Pamonha',             votes:10},
   {key:'canjica', emoji:'🥣', name:'Canjica',             votes:15},
-  {key:'milho',   emoji:'🌽', name:'Milho cozido',        votes:16},
+  {key:'milho',   emoji:'🌽', name:'Milho cozido',        votes:17},
   {key:'pede',    emoji:'🍫', name:'Pé de moleque',       votes:7},
   {key:'quentao', emoji:'🫖', name:'Quentão',             votes:5},
   {key:'arroz',   emoji:'🍚', name:'Arroz doce',          votes:7},
-  {key:'hotdog',  emoji:'🌭', name:'Cachorro Quente',     votes:13},
-  {key:'popcorn', emoji:'🍿', name:'Pipoca',              votes:4},
+  {key:'hotdog',  emoji:'🌭', name:'Cachorro Quente',     votes:14},
+  {key:'popcorn', emoji:'🍿', name:'Pipoca',              votes:5},
   {key:'pacoca',  emoji:'🥜', name:'Paçoca',              votes:9},
   {key:'pinhao',  emoji:'🫘', name:'Pinhão',              votes:5},
   {key:'pao',     emoji:'🥖', name:'Pão com carne louca', votes:11},
